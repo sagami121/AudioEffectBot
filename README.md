@@ -1,6 +1,6 @@
 # Discord Music Bot
 
-オーディオエフェクトを適用できるdiscord bot
+オーディオエフェクトを適用するdiscord bot
 
 ## Command
 ```
