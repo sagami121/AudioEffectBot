@@ -1,4 +1,4 @@
-# Discord Music Bot
+# AudioEffectBot
 
 オーディオエフェクトを適用するdiscord bot
 
