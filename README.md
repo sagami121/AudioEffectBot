@@ -1,47 +1,50 @@
 # Discord Music Bot
 
-YouTube の音楽をボイスチャンネルで再生できる Discord Bot です。
+オーディオエフェクトを適用できるdiscord bot
 
-## 機能
-- **YouTube 対応**: URL または検索ワードから再生
-- **SoundCloud 対応**: 直接 URL を貼って再生可能
-- **Apple Music 対応**: URL から曲を特定し YouTube で再生
-- `/skip`: 次の曲へ
-- `/stop`: 再生停止・退出
-- `/queue`: キューを表示
-
-## 導入方法
-
-### 1. リポジトリのクローン
-```bash
-git clone [あなたのリポジトリURL]
-cd Disbot
+## Command
 ```
+/effect <エフェクトの種類> <音声ファイル>
+```
+## スクリーンショット
+![スラッシュコマンドの使用例](docs/1.png)
 
-### 2. 依存関係のインストール
-```bash
+
+## 現在登録されているエフェクト
+- nightcore: 高音・高速化
+- bassboost: 低音強調
+- echo: エコー
+- reverb: リバーブ
+- vaporwave: 低音・低速化
+- reverse: 逆再生
+
+# セットアップ
+1.リポジトリをクローン
+```
+git clone https://github.com/sagami121/AudioEffectBot.git
+cd AudioEffectBot
+```
+2.必要なライブラリをインストール
+```
 npm install
 ```
+3.プロジェクト直下に .env を作成して以下を記入：
 
-### 3. 設定ファイルの作成
-`.env.example` をコピーして `.env` を作成し、必要な情報を入力してください。
-```bash
-cp .env.example .env
 ```
-
-- `DISCORD_TOKEN`: Discord Developer Portal で取得したトークン
-- `CLIENT_ID`: アプリケーションの ID
-- `GUILD_ID`: テスト用サーバーの ID
-
-### 4. コマンドの登録
-```bash
-node deploy-commands.js
+DISCORD_TOKEN=Botトークン
+CLIENT_ID=クライアントID
+GUILD_ID=サーバーID
 ```
-
-### 5. 起動
+### 2. 起動
 ```bash
 node index.js
 ```
 
-## ライセンス
-MIT License
+### 3.スラッシュコマンドを削除したい場合
+```bash
+node clear-commands.js
+```
+
+# ライセンス
+MITライセンスで公開されています。
+
